@@ -1,7 +1,8 @@
 def puissance (a,b) : 
-    for i in range (b-1) :
-    	a *= a
-    	result = a
-    return result
+    R=1
+    for i in range (0,b) :
+    	R = a*R
+    	print(R)
+    return R
 
-print(puissance(2,2))
+#print(puissance(2,2))

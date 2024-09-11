@@ -1,10 +1,10 @@
-import fonction as f
+import fonctions as f
 
 while True : 
 
 
-    nb1=input("nombre qui sera mis en puissance ?")
-    nb2=input("puissance ?")
+    nb1=int(input("nombre qui sera mis en puissance ?"))
+    nb2=int(input("puissance ?"))
     if type(nb1) is not int : 
         raise TypeError("seulement les entiers sont accepté")
     else : 
