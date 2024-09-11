@@ -13,5 +13,6 @@ jobs:
           python3 -m pytest test.py
       - name: run shell test
         shell: bash
-        run : echo "Nom branche : ${{ github.ref }}"
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
         run : echo "Nom repo : $GITHUB_OS"
