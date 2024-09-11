@@ -4,6 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: test error
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
       - uses: actions/setup-python@v4
