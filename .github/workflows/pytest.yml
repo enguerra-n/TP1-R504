@@ -12,5 +12,6 @@ jobs:
           pip install pytest
           python3 -m pytest test.py
       - name: run shell test
+        shell: bash
         run : echo "Nom branche : ${{ github.ref }}"
         run : echo "Nom repo : $GITHUB_OS"
