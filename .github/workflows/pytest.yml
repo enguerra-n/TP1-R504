@@ -3,6 +3,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
     steps:
       − run : echo "Nom branche : $GITHUB_REF"
       − run : echo "Nom repo : $GITHUB_OS"
