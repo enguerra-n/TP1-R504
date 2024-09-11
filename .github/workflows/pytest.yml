@@ -3,10 +3,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}
     steps:
-      − run : echo "Nom branche : $GITHUB_REF"
-      − run : echo "Nom repo : $GITHUB_OS"
+
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
@@ -14,4 +12,6 @@ jobs:
         run: |
           pip install pytest
           python3 -m pytest test.py
-
+      - name: run shell test
+      − run : echo "Nom branche : ${{ github.ref }}"
+      − run : echo "Nom repo : $GITHUB_OS"
