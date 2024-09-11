@@ -15,4 +15,4 @@ jobs:
         shell: bash
         run: echo "nom branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
         id: extract_nombranch
-        run : echo "Nom repo : ${{ runner.os }}. "
+        run : echo "Nom repo : $ImagesOS
